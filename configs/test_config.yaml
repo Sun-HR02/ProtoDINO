@@ -1,0 +1,20 @@
+data:
+  batch_size: 4
+  num_workers: 8
+  train_dir: "../datasets/FISH/train"
+  train_ann: "../datasets/FISH/FISH_5_shot.csv"
+  val_dir: "../datasets/FISH/train"
+  val_ann: "../datasets/FISH/FISH_5_shot.csv"
+model:
+  config_path: groundingdino/config/GroundingDINO_SwinB_cfg.py # 改了
+  lora_weights: weights/20250321_1137/checkpoint_epoch_32.pth
+  # weights_path: weights/groundingdino_swint_ogc.pth 
+  weights_path: weights/groundingdino_swinb_cogcoor.pth # 改了
+training:
+  learning_rate: 0.0001
+  num_epochs: 200
+  save_dir: weights
+  save_frequency: 5
+  use_lora: false # 用lora微调需要改成true，才能正确读取
+  visualization_frequency: 5
+  warmup_epochs: 5

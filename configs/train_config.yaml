@@ -1,0 +1,20 @@
+data:
+  train_dir: "../datasets/dataset1/train"
+  train_ann: "../datasets/dataset1/dataset1_10_shot.csv"
+  val_dir: "../datasets/dataset1/train"
+  val_ann: "../datasets/dataset1/dataset1_10_shot.csv"
+  batch_size: 4
+  num_workers: 8
+
+model:
+  config_path: "groundingdino/config/GroundingDINO_SwinT_OGC.py"
+  weights_path: "weights/groundingdino_swint_ogc.pth"
+
+training:
+  num_epochs: 50
+  learning_rate: 2e-4
+  save_dir: "weights"
+  save_frequency: 2
+  warmup_epochs: 5
+  use_lora: true
+  visualization_frequency: 2 # 也就是验证频率
