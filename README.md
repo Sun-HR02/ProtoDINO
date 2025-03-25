@@ -21,7 +21,7 @@ car-damage-detector模型下载模型请运行
 `git lfs clone https://huggingface.co/beingamit99/car_damage_detection`
 
 ## 数据集
-首先应准备数据集，并按图中安排目录结构。将COCO格式的数据放在datasets下。
+首先应准备数据集，并按图中安排目录结构。将COCO格式的数据放在datasets下。本项目使用数据集可以在 `https://drive.google.com/drive/folders/1Pewv7HYacwD5Rrknp5EiAdw8vMbaaFAA` 中下载。
 
 <img width="237" alt="image" src="https://github.com/user-attachments/assets/4da559a7-383a-450d-a193-1588ff7d8100" />
 
@@ -31,10 +31,15 @@ car-damage-detector模型下载模型请运行
 
 * 在`get_centroid_new.py` 和 `get_result_prototype_new.py`中，应确定CLIP和car-damage-detection的模型路径正确
 
-## 开始推理
+## 运行项目
 
-我们已经生成了原型的pkl文件在项目中。想要重新构建原型，请运行`python get_centroid_new.py`, 
+本项目运行分为两个阶段，**原型构建**和**目标检测**。
 
-运行`python get_result_prototype_new.py`获取目标检测结果，生成结果会保存在`results`目录中
+关于原型构建阶段，我们已经生成了原型的pkl文件在项目中。想要重新构建原型，请运行`python get_centroid_new.py`, 
 
+目标检测阶段，运行`python get_result_prototype_new.py`获取目标检测结果，生成结果会保存在`results`目录中
+
+## 实验结果
+
+<img width="492" alt="image" src="https://github.com/user-attachments/assets/6f3ecee0-059a-401e-b310-6a7c1aeac38a" />
 
