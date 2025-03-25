@@ -12,6 +12,7 @@ car-damage-detector模型请通过`git lfs clone https://huggingface.co/beingami
 
 ## 运行代码
 首先应准备数据集，并按图中安排目录结构。数据放在datasets下。
+
 <img width="237" alt="image" src="https://github.com/user-attachments/assets/4da559a7-383a-450d-a193-1588ff7d8100" />
 
 在ProtoDINO/configs下修改配置文件，
@@ -26,4 +27,4 @@ car-damage-detector模型请通过`git lfs clone https://huggingface.co/beingami
 进行推理需要使用
 `python get_result_prototype_new.py`
 
-具体使用文档还在编写当中....
+推理结果会保存在`results`目录下。
