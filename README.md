@@ -6,7 +6,7 @@
 
 我们在Grounding_DINO_FineTuning仓库的基础上改进得到了当前代码。
 
-## 准备工作
+## 模型权重
 
 grounding_dino权重下载 
 
@@ -20,20 +20,21 @@ car-damage-detector模型下载模型请运行
 
 `git lfs clone https://huggingface.co/beingamit99/car_damage_detection`
 
-## QuickStart
-首先应准备数据集，并按图中安排目录结构。数据放在datasets下。
+## 数据集
+首先应准备数据集，并按图中安排目录结构。将COCO格式的数据放在datasets下。
 
 <img width="237" alt="image" src="https://github.com/user-attachments/assets/4da559a7-383a-450d-a193-1588ff7d8100" />
 
-在ProtoDINO/configs下修改配置文件，
+在项目代码中，应确保权重和模型文件路径正确：
 
-在`train_config`和`test_config`中应注意修改`weights_path`和`config_path`的路径
+* ProtoDINO/configs下修改配置文件，在`train_config`和`test_config`中应注意修改`weights_path`和`config_path`的路径
 
-在`get_centroid_new.py` 和 `get_result_prototype_new.py`中，应确定CLIP和car-damage-detection的模型路径正确
+* 在`get_centroid_new.py` 和 `get_result_prototype_new.py`中，应确定CLIP和car-damage-detection的模型路径正确
 
+## 开始推理
 
 我们已经生成了原型的pkl文件在项目中。想要重新构建原型，请运行`python get_centroid_new.py`, 
 
-进行推理需要使用
-`python get_result_prototype_new.py`
+运行`python get_result_prototype_new.py`获取目标检测结果，生成结果会生成在`results`目录中
+
 
