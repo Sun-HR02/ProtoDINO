@@ -1,5 +1,7 @@
 # ProtoDINO
 
+为了增强基准模型目标分类的能力，ProtoDINO基于开放集目标检测模型GroundingDINO, 引入CLIP模型在少量目标域样本上提取图像局部特征和全局特征作支持集，并分别构建局部原型和全局原型网络。在目标检测过程中，对每一个图像查询，我们使用CLIP提取视觉特征，计算其与局部原型和全局原型的L2距离，并把该距离作为目标分类的指标之一；此外，我们引入CLIP模型进行分类；我们还引入car-damage-detection 模型，这是一个基于ViT实现的车辆外观损伤分类模型。在目标分类中，我们将grounding_dino、CLIP、car-damage-detection以及原型网络匹配概率加权求和，作为分类指标。
+
 我们在Grounding_DINO_FineTuning仓库的基础上改进得到了当前代码。
 
 ## 权重下载
