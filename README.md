@@ -21,7 +21,7 @@ car-damage-detector模型下载模型请运行
 `git lfs clone https://huggingface.co/beingamit99/car_damage_detection`
 
 ## 数据集
-首先应准备数据集，并按图中安排目录结构。将COCO格式的数据放在datasets下。本项目使用数据集可以在 `https://drive.google.com/drive/folders/1Pewv7HYacwD5Rrknp5EiAdw8vMbaaFAA` 中下载。
+首先应准备数据集，并按图中安排目录结构。将COCO格式的数据放在datasets下。本项目使用数据集可以通过https://drive.google.com/drive/folders/1Pewv7HYacwD5Rrknp5EiAdw8vMbaaFAA获取。
 
 <img width="237" alt="image" src="https://github.com/user-attachments/assets/4da559a7-383a-450d-a193-1588ff7d8100" />
 
