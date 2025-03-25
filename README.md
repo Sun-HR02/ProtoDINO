@@ -4,11 +4,17 @@
 
 ## 权重下载
 
-grounding_dino权重下载 wget -q https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth
+grounding_dino权重下载 
 
-CLIP实现采用了DFN5B-CLIP-ViT-H-14-378，使用`git lfs clone https://huggingface.co/apple/DFN5B-CLIP-ViT-H-14-378`下载模型
+wget -q https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth
 
-car-damage-detector模型请通过`git lfs clone https://huggingface.co/beingamit99/car_damage_detection`下载模型
+CLIP实现采用了DFN5B-CLIP-ViT-H-14-378，下载模型请使用
+
+`git lfs clone https://huggingface.co/apple/DFN5B-CLIP-ViT-H-14-378`
+
+car-damage-detector模型下载模型请运行
+
+`git lfs clone https://huggingface.co/beingamit99/car_damage_detection`
 
 ## 运行代码
 首先应准备数据集，并按图中安排目录结构。数据放在datasets下。
@@ -27,4 +33,3 @@ car-damage-detector模型请通过`git lfs clone https://huggingface.co/beingami
 进行推理需要使用
 `python get_result_prototype_new.py`
 
-推理结果会保存在`results`目录下。
